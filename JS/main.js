@@ -46,9 +46,19 @@ btn.addEventListener("click" , function(e){ //
 // 3333333
 
 
-var clickbtn = document.querySelector('#start-btn');
-var around = document.querySelector('.around')
+var around = document.querySelector('.around');
+var startBtn = document.querySelector('#start-btn');
 
-clickbtn.addEventListener('click', function(){
-    around.classList.toggle("scaled");
-})
+startBtn.addEventListener('click', animate);
+
+function animate() {
+  
+  around.style.transform = 'scale(1.8)';
+
+  setTimeout(function() {
+    around.style.transform = 'scale(1)';
+  }, 1500);
+}
+
+
+
